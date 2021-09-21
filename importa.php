@@ -39,13 +39,13 @@ foreach($shets->respostasAoFormulário1 as $aplicacao => $row){
     $params['cf_1056'] = $row->resumo;
     $params['cf_1070'] = $row->datahora;
     $params['cf_1072'] = $row->id;
-    //if(substr($row->datahora, 0, 11 ) == substr($dataLocal, 0, 11)){
+    if(substr($row->datahora, 0, 11 ) == substr($dataLocal, 0, 11)){
     
         $enviar = new config;
         $enviar->url = 'https://crm-hoken.duoit.com.br/modules/Webforms/capture.php';
         $enviar->params = $params;
         $retunado = $enviar->curl($enviar);
         sleep(30);
-    //}
+    }
 }
 ?>

@@ -1,6 +1,0 @@
-<?php
-
-use \importa\importa;
-
-
-?>
